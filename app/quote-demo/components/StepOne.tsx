@@ -48,7 +48,7 @@ export default function StepOne() {
         <div>
           <label className="block mb-1 font-medium">Location</label>
           <select
-            {...form.register("suburb")}
+            {...form.register("location")}
             className="w-full border rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="">Select location</option>
@@ -60,7 +60,7 @@ export default function StepOne() {
             <option value="regional">Regional</option>
           </select>
           <p className="text-red-600 text-sm mt-1">
-            {form.formState.errors.suburb?.message}
+            {form.formState.errors.location?.message}
           </p>
         </div>
       </div>

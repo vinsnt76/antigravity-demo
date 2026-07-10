@@ -15,10 +15,12 @@ import { FormProvider } from "./FormContext";
 // Full schema across all steps
 export const FormSchema = z.object({
   renovationType: z.union([z.string().min(1, "Required"), z.array(z.string()).min(1, "Required")]),
-  suburb: z.string().min(1, "Required"),
+  location: z.string().min(1, "Required"),
   budget: z.string().min(1, "Required"),
   timeline: z.string().min(1, "Required"),
   photos: z.any().optional(),
+  name: z.string().min(1, "Required"),
+  suburb: z.string().min(1, "Required"),
   email: z.string().email("Invalid email"),
   phone: z.string().min(8, "Invalid phone"),
 });
@@ -32,10 +34,12 @@ export default function MultiStepForm() {
     resolver: zodResolver(FormSchema),
     defaultValues: {
       renovationType: "",
-      suburb: "",
+      location: "",
       budget: "",
       timeline: "",
       photos: null,
+      name: "",
+      suburb: "",
       email: "",
       phone: "",
     },
