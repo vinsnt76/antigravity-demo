@@ -10,6 +10,7 @@ import StepTwo from "./StepTwo";
 import StepThree from "./StepThree";
 import StepFour from "./StepFour";
 import FormNavigation from "./FormNavigation";
+import SuccessCard from "./SuccessCard";
 import { FormProvider } from "./FormContext";
 
 // Full schema across all steps
@@ -29,6 +30,7 @@ export type FormData = z.infer<typeof FormSchema>;
 
 export default function MultiStepForm() {
   const [currentStep, setCurrentStep] = useState(1);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const form = useForm<FormData>({
     resolver: zodResolver(FormSchema),
@@ -54,7 +56,18 @@ export default function MultiStepForm() {
       method: "POST",
       body: JSON.stringify(data),
     });
+    setIsSubmitted(true);
   };
+
+  const handleRestart = () => {
+    form.reset();
+    setCurrentStep(1);
+    setIsSubmitted(false);
+  };
+
+  if (isSubmitted) {
+    return <SuccessCard onRestart={handleRestart} />;
+  }
 
   return (
     <FormProvider form={form}>
