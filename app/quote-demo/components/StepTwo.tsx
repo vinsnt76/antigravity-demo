@@ -5,12 +5,24 @@ export default function StepTwo() {
   const form = useFormContextSafe<FormData>();
 
   return (
-    <div>
-      <h2 className="text-xl font-semibold mb-4 text-gray-800">Step 2 — Budget & Timeline</h2>
+    <div className="space-y-6 text-gray-800 font-sans">
+      <div className="bg-[#F4C430] px-4 py-3 rounded-lg flex items-center gap-3 mb-4">
+        <img
+          src="/bains-logo.webp"
+          alt="Bains Renovations"
+          className="h-10 w-auto"
+        />
+        <div className="flex flex-col">
+          <h2 className="text-xl font-bold text-gray-800 leading-tight">Plan Your Renovation Window</h2>
+          <p className="font-caveat text-lg text-gray-700 leading-tight mt-0.5">
+            Tell us your ideal budget and timeframe — we’ll do the rest.
+          </p>
+        </div>
+      </div>
 
       <div className="space-y-4">
         <div>
-          <label className="block mb-1 text-sm font-medium text-gray-700">Budget</label>
+          <label className="block mb-1 font-medium">Budget</label>
           <select
             {...form.register("budget")}
             className="w-full border rounded-lg px-3 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -27,7 +39,7 @@ export default function StepTwo() {
         </div>
 
         <div>
-          <label className="block mb-1 text-sm font-medium text-gray-700">Timeline</label>
+          <label className="block mb-1 font-medium">Timeline</label>
           <select
             {...form.register("timeline")}
             className="w-full border rounded-lg px-3 py-2 text-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"

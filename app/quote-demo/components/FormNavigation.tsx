@@ -13,7 +13,7 @@ export default function FormNavigation({
         <button
           type="button"
           onClick={onBack}
-          className="px-4 py-2 rounded-lg bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium transition-colors"
+          className="px-6 py-2.5 rounded-lg bg-gray-800 hover:bg-gray-700 text-[#F4C430] font-semibold shadow-sm transition-all duration-200"
         >
           Back
         </button>
