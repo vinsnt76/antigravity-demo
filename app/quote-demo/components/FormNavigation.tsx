@@ -25,7 +25,7 @@ export default function FormNavigation({
         <button
           type="button"
           onClick={onNext}
-          className="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 font-medium transition-colors"
+          className="px-6 py-2.5 rounded-lg bg-[#F4C430] hover:bg-[#e0b220] text-gray-800 font-semibold shadow-sm transition-all duration-200"
         >
           Next
         </button>
