@@ -6,18 +6,18 @@ export default function StepOne() {
 
   return (
     <div className="space-y-6 text-gray-800 font-sans">
-      <div>
-        <div className="bg-[#F4C430] px-4 py-3 rounded-lg flex items-center gap-3 mb-2">
-          <img
-            src="/bains-logo.webp"
-            alt="Bains Renovations"
-            className="h-8 w-auto"
-          />
-          <h2 className="text-xl font-semibold text-gray-800">Tell us about your renovation</h2>
+      <div className="bg-[#F4C430] px-4 py-3 rounded-lg flex items-center gap-3 mb-4">
+        <img
+          src="/bains-logo.webp"
+          alt="Bains Renovations"
+          className="h-10 w-auto"
+        />
+        <div className="flex flex-col">
+          <h2 className="text-xl font-bold text-gray-800 leading-tight">Kick off your renovation quote</h2>
+          <p className="font-caveat text-lg text-gray-700 leading-tight mt-0.5">
+            Follow the steps for your complimentary quote.
+          </p>
         </div>
-        <p className="font-caveat text-xl text-gray-600 pl-1">
-          Follow the steps for your complimentary quote.
-        </p>
       </div>
 
       <div className="space-y-4">
