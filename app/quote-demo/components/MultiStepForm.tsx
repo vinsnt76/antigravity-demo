@@ -14,7 +14,7 @@ import { FormProvider } from "./FormContext";
 
 // Full schema across all steps
 export const FormSchema = z.object({
-  renovationType: z.string().min(1, "Required"),
+  renovationType: z.union([z.string().min(1, "Required"), z.array(z.string()).min(1, "Required")]),
   suburb: z.string().min(1, "Required"),
   budget: z.string().min(1, "Required"),
   timeline: z.string().min(1, "Required"),
