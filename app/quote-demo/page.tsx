@@ -63,7 +63,7 @@ export default function QuoteDemoPage() {
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 z-50 p-4 bg-[#F4C430] hover:bg-[#e0b220] text-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center animate-bounce"
+          className="fixed bottom-6 right-6 z-50 p-4 bg-[#F4C430] hover:bg-[#e0b220] text-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 flex items-center justify-center animate-glow"
           title="Get a Renovation Quote"
         >
           <svg
