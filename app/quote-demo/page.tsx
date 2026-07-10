@@ -8,10 +8,10 @@ export default function QuoteDemoPage() {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    // Automatically open the form after 30 seconds
+    // Automatically open the form after 15 seconds
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 30000);
+    }, 15000);
 
     return () => clearTimeout(timer);
   }, []);
